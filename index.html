@@ -10,17 +10,20 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden; 
-            background-color: #000; 
+            overflow: hidden; /* Hides scrollbars */
+            background-color: #000; /* Black background */
         }
 
+        /* This is the CSS for the image */
         #main-gif {
-
+            /* Position it to cover the entire screen */
             position: fixed; 
             top: 0;
             left: 0;
-
-
+            width: 100vw; /* 100% of the viewport width */
+            height: 100vh; /* 100% of the viewport height */
+            
+            /* This scales the image to fill the screen */
             object-fit: cover; 
         }
     </style>
