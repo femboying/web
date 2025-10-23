@@ -23,18 +23,76 @@
             max-height: 100%;
             width: auto;
             height: auto;
-            object-fit: contain; 
+            object-fit: contain;
         }
-		audio {
+
+        audio {
             display: none;
+        }
+
+        /* Enter site overlay */
+        #enter-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: monospace;
+            font-size: 1.2rem;
+            z-index: 10;
+            transition: opacity 1s ease;
+        }
+
+        #enter-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        button {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 10px 25px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: white;
+            color: black;
         }
     </style>
 </head>
 <body>
-	<audio autoplay loop>
+
+    <div id="enter-overlay">
+        <p>corpsebri.de</p>
+        <button id="enter-btn">Enter Site</button>
+    </div>
+
+    <img id="main-gif" src="IMG_0355.gif" alt="Animated content for corpsebri.de">
+
+    <audio id="bg-audio" loop>
         <source src="nocturne.mp3" type="audio/mpeg">
     </audio>
-    <img id="main-gif" src="IMG_0355.gif" alt="Animated content for corpsebri.de">
+
+    <script>
+        const button = document.getElementById('enter-btn');
+        const overlay = document.getElementById('enter-overlay');
+        const audio = document.getElementById('bg-audio');
+
+        button.addEventListener('click', () => {
+            overlay.classList.add('hidden');
+            audio.play();
+        });
+    </script>
 
 </body>
 </html>
