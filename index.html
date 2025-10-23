@@ -10,19 +10,18 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden; /* Prevent scrollbars /
-            display: flex; / Use flexbox for centering /
-            justify-content: center; / Center horizontally /
-            align-items: center; / Center vertically /
-            background-color: #000; / Optional: black background /
+            overflow: hidden; 
+            background-color: #000; 
         }
 
         #main-gif {
-            max-width: 100%; / Ensure GIF doesn't overflow horizontally /
-            max-height: 100%; / Ensure GIF doesn't overflow vertically /
-            width: auto; / Maintain aspect ratio /
-            height: auto; / Maintain aspect ratio /
-            display: block; / Remove extra space below image */
+
+            position: fixed; 
+            top: 0;
+            left: 0;
+
+
+            object-fit: cover; 
         }
     </style>
 </head>
