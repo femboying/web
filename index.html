@@ -5,26 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>corpsebri.de</title>
     <style>
-        body, html {
+        html, body {
             margin: 0;
             padding: 0;
-            width: 100%;
             height: 100%;
-            overflow: hidden; /* Hides scrollbars */
-            background-color: #000; /* Black background */
+            width: 100%;
+            overflow: hidden;
+            background: #000;
         }
 
-        /* This is the CSS for the image */
         #main-gif {
-            /* Position it to cover the entire screen */
-            position: fixed; 
-            top: 0;
-            left: 0;
-            width: 100vw; /* 100% of the viewport width */
-            height: 100vh; /* 100% of the viewport height */
-            
-            /* This scales the image to fill the screen */
-            object-fit: cover; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            width: auto;
+            height: auto;
         }
     </style>
 </head>
